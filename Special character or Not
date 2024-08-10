@@ -1,0 +1,13 @@
+import re
+def is_special_character(char):
+    return not re.match(r'[a-zA-Z0-9\s]', char)
+
+def print_character_status(text):
+    for char in text:
+        if is_special_character(char):
+            print(f"'{char}' is a special character.")
+        else:
+            print(f"'{char}' is not a special character.")
+input_string = "Hello, World! @2024 #Python"
+print_character_status(input_string)
+
